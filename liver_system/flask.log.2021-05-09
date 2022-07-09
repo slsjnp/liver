@@ -1,0 +1,627 @@
+[2021-05-09 09:22:41,445][app.py:1892][ERROR][139875318273856] - Exception on /uploadsImage [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: upload_image() missing 1 required positional argument: 'case_id'
+[2021-05-09 10:33:16,195][app.py:1892][ERROR][140143231129408] - Exception on /uploadsImage [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1459, in upload_image
+    file.save(join(src_image_path, file_id + file_name[-3:]))
+TypeError: unsupported operand type(s) for +: 'UUID' and 'str'
+[2021-05-09 10:34:38,497][app.py:1892][ERROR][140119568467776] - Exception on /uploadsImage [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1466, in upload_image
+    new_size, old_size = compress(src_image, compress_image_name)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1381, in compress
+    cv2.imwrite(save_path, image, [int(cv2.IMWRITE_JPEG_QUALITY), quality])
+cv2.error: OpenCV(4.4.0) /tmp/pip-req-build-cg56sov1/opencv/modules/imgcodecs/src/loadsave.cpp:667: error: (-2:Unspecified error) could not find a writer for the specified extension in function 'imwrite_'
+
+[2021-05-09 10:36:56,755][app.py:1892][ERROR][140391423633216] - Exception on /uploadsImage [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1466, in upload_image
+    new_size, old_size = compress(src_image, compress_image_name)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1381, in compress
+    cv2.imwrite(save_path, image, [int(cv2.IMWRITE_JPEG_QUALITY), quality])
+cv2.error: OpenCV(4.4.0) /tmp/pip-req-build-cg56sov1/opencv/modules/imgcodecs/src/loadsave.cpp:667: error: (-2:Unspecified error) could not find a writer for the specified extension in function 'imwrite_'
+
+[2021-05-09 18:15:30,963][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:15:31,937][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:15:33,814][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:15:46,225][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:15:47,632][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:17:07,288][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:17:07,870][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:17:09,135][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:17:13,825][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 762, in new_cases
+    if len(identify_card) != 18:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:20:10,271][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:20:33,742][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:34:28,130][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:34:31,228][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:34:35,596][app.py:1892][ERROR][140252246918976] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:35:23,613][app.py:1892][ERROR][140667389425472] - Exception on /patientInfo/newPatientCases/quality [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 757, in quality
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 18:46:55,738][app.py:1892][ERROR][140019099006784] - Exception on /uploadsImage/dd3cb106b0b311eb9bc7350270f55746 [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1561, in upload_image
+    "guid": guid,
+NameError: name 'guid' is not defined
+[2021-05-09 19:10:48,833][app.py:1892][ERROR][140719568611136] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 841, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 19:10:59,718][app.py:1892][ERROR][140719568611136] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 841, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 19:11:00,677][app.py:1892][ERROR][140719568611136] - Exception on /patientInfo/newPatientCases/submission [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 841, in new_cases
+    if len(weight) > 10:
+TypeError: object of type 'NoneType' has no len()
+[2021-05-09 19:18:09,085][app.py:1892][ERROR][140300420785984] - Exception on /downloadImage/3266f25ab0b811eb9e2ed13ef94a51d5 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1904, in downloadImage
+    conn.download('image', key=case_id)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-05-09 19:52:44,934][app.py:1892][ERROR][139890978928448] - Exception on /downloadImage/0e81c1dab0bd11ebb7b973fe9b6a8d23 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1922, in downloadImage
+    return send_file(down['body'], attachment_filename='.jpg'.format(case_id), as_attachment=True)
+KeyError: 'body'
+[2021-05-09 20:11:31,977][app.py:1892][ERROR][140605855651648] - Exception on /downloadImage/a5e53ef6b0bf11eb8c18e3e0cf6c251a [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1918, in downloadImage
+    _tmp_file.write(down['Body'])
+TypeError: a bytes-like object is required, not 'StreamingBody'
+[2021-05-09 20:22:53,747][app.py:1892][ERROR][140458080577344] - Exception on /downloadImage/4278136eb0c111eb984a67b2e1b0f99d [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1905, in downloadImage
+    down = conn.download('image', key='compress/'+case_id)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-05-09 20:27:19,604][app.py:1892][ERROR][139663397717824] - Exception on /downloadImage/e350670ab0c111eb8435e975780330f6 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1928, in downloadImage
+    return send_file(save_path, attachment_filename='.jpg'.format(case_id), as_attachment=True)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/helpers.py", line 629, in send_file
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_system/domo/app/./123.jpg'
+[2021-05-09 20:28:16,530][app.py:1892][ERROR][140042417542976] - Exception on /downloadImage/e350670ab0c111eb8435e975780330f6 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1906, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'static/123.jpg'
+[2021-05-09 20:28:47,354][app.py:1892][ERROR][139854584080192] - Exception on /downloadImage/e350670ab0c111eb8435e975780330f6 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1906, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './static/123.jpg'
+[2021-05-09 20:29:01,474][app.py:1892][ERROR][140395985737536] - Exception on /downloadImage/e350670ab0c111eb8435e975780330f6 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1906, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'static/123.jpg'
+[2021-05-09 20:29:44,243][app.py:1892][ERROR][140395985737536] - Exception on /downloadImage/362afec2b0c211eb8dac175640a7b4d9 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1906, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'static/123.jpg'
+[2021-05-09 20:30:15,211][app.py:1892][ERROR][140355195729728] - Exception on /downloadImage/362afec2b0c211eb8dac175640a7b4d9 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1907, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_systemstatic/123.jpg'
+[2021-05-09 20:34:17,494][app.py:1892][ERROR][140336572364608] - Exception on /downloadImage/362afec2b0c211eb8dac175640a7b4d9 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1907, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_systemstatic/123.jpg'
+[2021-05-09 20:35:04,790][app.py:1892][ERROR][140244599662400] - Exception on /downloadImage/362afec2b0c211eb8dac175640a7b4d9 [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1907, in downloadImage
+    down = conn.download('image', key='compress/'+case_id, save_path=save_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 57, in download
+    with open(save_path, 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_systemstatic/123.jpg'

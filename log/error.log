@@ -1,0 +1,5 @@
+2020/10/11 11:21:13 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2020/10/11 11:23:02 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2020/10/11 11:24:59 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2020/10/11 11:27:03 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2020/10/11 11:32:17 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1

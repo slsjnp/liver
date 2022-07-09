@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title> Sign up & Sign in </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Gaze Sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+
+         <link href="{{url_for('static',filename='css/style.css',_external=True)}}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+
+   </head>
+   <body>
+      <div class="mid-class">
+         <div class="art-right-w3ls">
+            <h2>Sign In and Sign Up</h2>
+            <form action="/" method="post">
+               {{form.hidden_tag()}}
+               <div class="main">
+                  <div class="form-left-to-w3l">
+                     {{form.username(size=20,id='username')}}
+                     {%for e in form.username.errors%}
+                     {%endfor%}
+                     <!--<input type="text" name="name" placeholder="Username" required="">-->
+                  </div>
+                  <div class="form-left-to-w3l ">
+                     {{form.password(size=20,id='password')}}
+                     {%for e in form.password.errors%}
+                     {%endfor%}
+                     <!--<input type="password" name="password" placeholder="Password" required="">-->
+                     <div class="clear"></div>
+                  </div>
+               </div>
+               <div class="left-side-forget">
+                  <input type="checkbox" class="checked">
+                  <span class="remenber-me">Remember me </span>
+               </div>
+               <div class="right-side-forget">
+                  <a href="#" class="for">Forgot password...?</a>
+               </div>
+               <div class="clear"></div>
+               <div class="btnn">
+                  <!--<button id="submit1" type="submit">Sign In</button>-->
+                   <input id="submit1" name="submit1" type="submit" value="login">
+                   {% for message in get_flashed_messages() %}
+                   {{ message }}
+                   {% endfor %}
+               </div>
+            </form>
+            <div class="w3layouts_more-buttn">
+               <h3>Don't Have an account..?
+                  <a href="#content1">Sign Up Here
+                  </a>
+               </h3>
+            </div>
+            <!-- popup-->
+            <div id="content1" class="popup-effect">
+               <div class="popup">
+                  <!--login form-->
+                  <div class="letter-w3ls">
+                     <form action="/" method="post">
+                        {{form.hidden_tag()}}
+                        <div class="form-left-to-w3l">
+                           {{form.username(size=20,id='username')}}
+                           {%for e in form.username.errors%}
+                           {%endfor%}
+                           <!--<input type="text" name="username" placeholder="Username" required="">-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           {{form.password(size=20,id='password')}}
+                           {%for e in form.password.errors%}
+                           {%endfor%}
+                           <!--<input type="password" name="password" placeholder="Password" required="">-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           {{form.name(size=20,id='name')}}
+                           {%for e in form.name.errors%}
+                           {%endfor%}
+                           <!--<input type="text" name="hostname" placeholder="hostname" required="">-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           {{form.department(size=20,id='department')}}
+                           {%for e in form.department.errors%}
+                           {%endfor%}
+                           <!--<input type="text" name="port" placeholder="port" required="">-->
+                        </div>
+
+                        <div class="form-left-to-w3l margin-zero">
+                           {{form.phone_number(size=20,id='phone_number')}}
+                           {%for e in form.phone_number.errors%}
+                           {%endfor%}
+                           <!--<input type="text" name="database" placeholder="database" required="">-->
+                        </div>
+
+                        <div class="btnn">
+                           <input id="sign_submit" name="sign_submit" type="submit" value="Sign in">
+                           {% for message in get_flashed_messages() %}
+                              {{ message }}
+                           {% endfor %}
+                        </div>
+                     </form>
+                     <div class="clear"></div>
+                  </div>
+                  <!--//login form-->
+                  <a class="close" href="#">&times;</a>
+               </div>
+            </div>
+            <!-- //popup -->
+         </div>
+         <div class="art-left-w3ls">
+            <h1 class="header-w3ls">
+                Tumor and Liver auditing system sign up & login Form
+            </h1>
+         </div>
+      </div>
+      <footer class="bottem-wthree-footer">
+         <p>
+            © 2019 Postgresql Auditing System Sign Up & Login Form.
+         </p>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,1428 @@
+[2021-06-01 18:07:44,568][app.py:1892][ERROR][139958532261696] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1796, in execute
+    dcm_list.sort(key=lambda bmp_list: int(bmp_list[:-4]))
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1796, in <lambda>
+    dcm_list.sort(key=lambda bmp_list: int(bmp_list[:-4]))
+ValueError: invalid literal for int() with base 10: 'IMG-0001-00059'
+[2021-06-01 18:20:35,043][app.py:1892][ERROR][140201751631680] - Exception on /apispec_1.json [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 163, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 133, in get
+    return jsonify(self.loader())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 402, in get_apispecs
+    doc_dir=self.config.get('doc_dir'))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 154, in get_specs
+    method, sanitizer, endpoint=rule.endpoint, verb=verb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 634, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 292, in stale_possible_simple_keys
+    "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "<unicode string>", line 12, column 9:
+            required:true
+            ^
+could not find expected ':'
+  in "<unicode string>", line 13, column 5:
+        responses:
+        ^
+[2021-06-01 18:21:14,356][app.py:1892][ERROR][140385922217792] - Exception on /apispec_1.json [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 163, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 133, in get
+    return jsonify(self.loader())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 402, in get_apispecs
+    doc_dir=self.config.get('doc_dir'))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 154, in get_specs
+    method, sanitizer, endpoint=rule.endpoint, verb=verb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 634, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 292, in stale_possible_simple_keys
+    "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "<unicode string>", line 12, column 9:
+            required:true
+            ^
+could not find expected ':'
+  in "<unicode string>", line 13, column 5:
+        responses:
+        ^
+[2021-06-01 18:21:37,399][app.py:1892][ERROR][140578896930624] - Exception on /apispec_1.json [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 163, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 133, in get
+    return jsonify(self.loader())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 402, in get_apispecs
+    doc_dir=self.config.get('doc_dir'))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 154, in get_specs
+    method, sanitizer, endpoint=rule.endpoint, verb=verb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 634, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 292, in stale_possible_simple_keys
+    "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "<unicode string>", line 12, column 9:
+            required:true
+            ^
+could not find expected ':'
+  in "<unicode string>", line 13, column 5:
+        responses:
+        ^
+[2021-06-01 18:21:38,456][app.py:1892][ERROR][140578896930624] - Exception on /apispec_1.json [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/views.py", line 163, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 133, in get
+    return jsonify(self.loader())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/base.py", line 402, in get_apispecs
+    doc_dir=self.config.get('doc_dir'))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 154, in get_specs
+    method, sanitizer, endpoint=rule.endpoint, verb=verb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flasgger/utils.py", line 634, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/yaml/scanner.py", line 292, in stale_possible_simple_keys
+    "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "<unicode string>", line 12, column 9:
+            required:true
+            ^
+could not find expected ':'
+  in "<unicode string>", line 13, column 5:
+        responses:
+        ^
+[2021-06-01 21:27:34,639][app.py:1892][ERROR][140650105284416] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:28:10,060][app.py:1892][ERROR][140650105284416] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:28:18,385][app.py:1892][ERROR][140650105284416] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:28:30,786][app.py:1892][ERROR][140650105284416] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:28:33,378][app.py:1892][ERROR][140650105284416] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:30:41,559][app.py:1892][ERROR][140264005052224] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[2021-06-01 21:33:36,800][app.py:1892][ERROR][140628646926144] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2021-06-01 21:33:37,958][app.py:1892][ERROR][140628646926144] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2021-06-01 21:34:22,908][app.py:1892][ERROR][140628646926144] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2021-06-02 10:27:51,032][app.py:1892][ERROR][140675453732672] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 10:28:19,893][app.py:1892][ERROR][140675453732672] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 10:36:46,517][app.py:1892][ERROR][140675453732672] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: '[object Object]'
+[2021-06-02 10:37:49,381][app.py:1892][ERROR][140675453732672] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: '[object Object]'
+[2021-06-02 10:55:05,767][app.py:1892][ERROR][140414839191360] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 10:55:45,501][app.py:1892][ERROR][140414839191360] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 11:11:02,469][app.py:1892][ERROR][140414839191360] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 11:11:42,189][app.py:1892][ERROR][140414839191360] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:11:54,551][app.py:1892][ERROR][140414839191360] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2040, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:25:53,594][app.py:1892][ERROR][140075701696320] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1401, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 52, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+[2021-06-02 11:40:18,376][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:45:23,926][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:48:16,204][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:49:00,925][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:50:27,916][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:53:40,722][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 11:54:05,368][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:01:02,122][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:01:13,822][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:07:59,515][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:08:13,097][app.py:1892][ERROR][140075701696320] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2097, in smoothDegreeExec
+    dcm_path = '{}/dcm/{}.dcm'.format(case_id, num-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+[2021-06-02 12:09:56,679][app.py:1892][ERROR][139728859195200] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:10:02,018][app.py:1892][ERROR][139728859195200] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2095, in smoothDegreeExec
+    num = data['num']
+KeyError: 'num'
+[2021-06-02 12:10:17,211][app.py:1892][ERROR][140162634741568] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2095, in smoothDegreeExec
+    num = data['num']
+KeyError: 'num'
+[2021-06-02 12:19:04,249][app.py:1892][ERROR][140712515987264] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:29:05,523][app.py:1892][ERROR][140712515987264] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:30:57,799][app.py:1892][ERROR][140712515987264] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:32:14,090][app.py:1892][ERROR][140712515987264] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:39:27,647][app.py:1892][ERROR][140712515987264] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2041, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-02 12:50:32,176][app.py:1892][ERROR][140038442428224] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2114, in smoothDegreeExec
+    smooth = smoothDegree(dcm, label, axis)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2049, in smoothDegree
+    a = pydicom.read_file(dcm)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 871, in dcmread
+    force=force, specific_tags=specific_tags)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 668, in read_partial
+    preamble = read_preamble(fileobj, force)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 605, in read_preamble
+    preamble = fp.read(128)
+AttributeError: 'bytes' object has no attribute 'read'
+[2021-06-02 13:13:00,570][app.py:1892][ERROR][140593193654080] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2118, in smoothDegreeExec
+    _tmp_file.write(dcm.encode("utf-8"))  # 需要写入二进制
+AttributeError: 'bytes' object has no attribute 'encode'
+[2021-06-02 15:35:31,771][app.py:1892][ERROR][140226373306176] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2128, in smoothDegreeExec
+    smooth = smoothDegree(dcm, label, axis)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2049, in smoothDegree
+    a = pydicom.read_file(dcm)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 871, in dcmread
+    force=force, specific_tags=specific_tags)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 668, in read_partial
+    preamble = read_preamble(fileobj, force)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/pydicom/filereader.py", line 605, in read_preamble
+    preamble = fp.read(128)
+AttributeError: 'bytes' object has no attribute 'read'
+[2021-06-02 16:22:56,758][app.py:1892][ERROR][139653671323456] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2145, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file, 0)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-02 16:25:53,176][app.py:1892][ERROR][139744083257152] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2145, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file1, 0)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-02 16:26:23,099][app.py:1892][ERROR][139873359779648] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2145, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file1)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-02 16:30:04,671][app.py:1892][ERROR][140513816090432] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2137, in smoothDegreeExec
+    label_file = cv2.imdecode(label)
+TypeError: imdecode() missing required argument 'flags' (pos 2)
+[2021-06-02 16:30:22,379][app.py:1892][ERROR][139892640974656] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2137, in smoothDegreeExec
+    label_file = cv2.imdecode(label, 0)
+TypeError: Expected Ptr<cv::UMat> for argument 'buf'
+[2021-06-02 16:33:20,673][app.py:1892][ERROR][139773754189632] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2147, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file1, 0)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-02 16:33:51,651][app.py:1892][ERROR][140505843984192] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2147, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file1, 0)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-02 16:57:52,248][app.py:1892][ERROR][140505843984192] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2042, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'
+[2021-06-03 08:30:37,836][app.py:1892][ERROR][140505843984192] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2147, in smoothDegreeExec
+    label_file = cv2.imread(_tmp_file1, 0)
+SystemError: <built-in function imread> returned NULL without setting an error
+[2021-06-03 08:41:55,318][app.py:1892][ERROR][140560489654080] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2152, in smoothDegreeExec
+    smooth_data = smooth_(dcm_img, label_file, axis['x1'], axis['y1'], axis['x2'], axis['y2'])
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 88, in smooth_
+    img1 = img[y1 + 1:yf, x1 + 2:xf]  # 在原图范围内裁剪
+TypeError: 'Image' object is not subscriptable
+[2021-06-03 08:45:59,220][app.py:1892][ERROR][140616134219584] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2152, in smoothDegreeExec
+    smooth_data = smooth_(dcm_img, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 88, in smooth_
+    img1 = img[y1 + 1:yf, x1 + 2:xf]  # 在原图范围内裁剪
+TypeError: 'Image' object is not subscriptable
+[2021-06-03 08:46:26,732][app.py:1892][ERROR][140616134219584] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2152, in smoothDegreeExec
+    smooth_data = smooth_(dcm_img, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 88, in smooth_
+    img1 = img[y1 + 1:yf, x1 + 2:xf]  # 在原图范围内裁剪
+TypeError: 'Image' object is not subscriptable
+[2021-06-03 08:51:06,617][app.py:1892][ERROR][140477537064768] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2134, in smoothDegreeExec
+    dcm_img = cv2.fromarray(dcm_temp)
+AttributeError: module 'cv2.cv2' has no attribute 'fromarray'
+[2021-06-03 08:52:06,755][app.py:1892][ERROR][140357082965824] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2136, in smoothDegreeExec
+    dcm_img = dcm_temp.convert('L')
+AttributeError: 'numpy.ndarray' object has no attribute 'convert'
+[2021-06-03 08:53:35,572][app.py:1892][ERROR][140338574677824] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2154, in smoothDegreeExec
+    smooth_data = smooth_(dcm_temp, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 107, in smooth_
+    image, contours, hierarchy = cv2.findContours(skeleton1, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+ValueError: not enough values to unpack (expected 3, got 2)
+[2021-06-03 08:55:29,021][app.py:1892][ERROR][140141102982976] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2154, in smoothDegreeExec
+    smooth_data = smooth_(dcm_temp, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 101, in smooth_
+    edge_s = sobel_grad(img_ro)
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/watershed1.py", line 23, in sobel_grad
+    labels = morphology.watershed(sobelxy, 2, mask=sobelxy)  # 基于梯度的分水岭算法
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/_shared/utils.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/morphology/_deprecated.py", line 111, in watershed
+    compactness, watershed_line)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 203, in watershed
+    image, markers, mask = _validate_inputs(image, markers, mask, connectivity)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 81, in _validate_inputs
+    int(markers / (n_pixels / image.size)))
+OverflowError: cannot convert float infinity to integer
+[2021-06-03 08:56:48,674][app.py:1892][ERROR][140409281701696] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2154, in smoothDegreeExec
+    smooth_data = smooth_(dcm_temp, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 101, in smooth_
+    edge_s = sobel_grad(img_ro)
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/watershed1.py", line 23, in sobel_grad
+    labels = morphology.watershed(sobelxy, 2, mask=sobelxy)  # 基于梯度的分水岭算法
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/_shared/utils.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/morphology/_deprecated.py", line 111, in watershed
+    compactness, watershed_line)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 203, in watershed
+    image, markers, mask = _validate_inputs(image, markers, mask, connectivity)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 81, in _validate_inputs
+    int(markers / (n_pixels / image.size)))
+OverflowError: cannot convert float infinity to integer
+[2021-06-03 08:59:19,225][app.py:1892][ERROR][140115321218880] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2154, in smoothDegreeExec
+    smooth_data = smooth_(dcm_temp, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 101, in smooth_
+    edge_s = sobel_grad(img_ro)
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/watershed1.py", line 23, in sobel_grad
+    labels = morphology.watershed(sobelxy, 2, mask=sobelxy)  # 基于梯度的分水岭算法
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/_shared/utils.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/morphology/_deprecated.py", line 111, in watershed
+    compactness, watershed_line)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 203, in watershed
+    image, markers, mask = _validate_inputs(image, markers, mask, connectivity)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 81, in _validate_inputs
+    int(markers / (n_pixels / image.size)))
+OverflowError: cannot convert float infinity to integer
+[2021-06-03 09:00:09,836][app.py:1892][ERROR][139877720258368] - Exception on /smoothDegreeExec [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2154, in smoothDegreeExec
+    smooth_data = smooth_(dcm_temp, label_file, round(axis['x1']), round(axis['y1']), round(axis['x2']), round(axis['y2']))
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/smooth.py", line 101, in smooth_
+    edge_s = sobel_grad(img_ro)
+  File "/home/sj/workspace/my_git/liver/liver_system/Smooth/watershed1.py", line 23, in sobel_grad
+    labels = morphology.watershed(sobelxy, 2, mask=sobelxy)  # 基于梯度的分水岭算法
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/_shared/utils.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/morphology/_deprecated.py", line 111, in watershed
+    compactness, watershed_line)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 203, in watershed
+    image, markers, mask = _validate_inputs(image, markers, mask, connectivity)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/skimage/segmentation/_watershed.py", line 81, in _validate_inputs
+    int(markers / (n_pixels / image.size)))
+OverflowError: cannot convert float infinity to integer
+[2021-06-03 09:40:52,779][app.py:1892][ERROR][140386938976064] - Exception on /smoothDegreeImage [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 2042, in smoothDegreeImage
+    path = '{}/dcmtopng/{}.png'.format(case_id, int(num)-1)
+ValueError: invalid literal for int() with base 10: 'undefined'

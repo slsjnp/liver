@@ -1,0 +1,84 @@
+version: '2'
+services:
+    liver-pg11:
+        image: postgres:11.16-bullseye
+        container_name: liver-pg11
+        restart: always
+        ports:
+            - 5432:5432
+        networks:
+            - liver-net
+        volumes:
+            - /home/sj/workspace/liver/pgdata:/var/lib/postgresql/data
+        environment:
+            POSTGRES_PASSWORD: liver
+            POSTGRES_USER: liver
+            POSTGRES_DB: liver
+            PGDATA: /var/lib/postgresql/data
+            ALLOW_IP_RANGE: 0.0.0.0/0
+    pgadmin:
+        image: dpage/pgadmin4:6.10
+        container_name: pgadmin
+        restart: always
+        ports:
+            - 5433:80
+        networks:
+            - liver-net
+        environment:
+            TZ: Asia/Shanghai
+            PGADMIN_DEFAULT_PASSWORD: 123456
+            PGADMIN_DEFAULT_EMAIL: slsj7899@126.com
+    minio:
+        image: minio/minio:RELEASE.2022-05-08T23-50-31Z.hotfix.0eaa928fa
+        container_name: minio
+        restart: always
+        ports:
+            - 9000:9000
+            - 9001:9001
+        networks:
+            - liver-net
+        volumes:
+            - /opt/data:/data
+        environment:
+            TZ: Asia/Shanghai
+            MINIO_ROOT_USER: admin
+            MINIO_ROOT_PASSWORD: 12345678
+        command: server /data --console-address ":9001"  
+        # docker run -it --gpus=all -p 5002:5000 -p 5022:22 --ipc=host --network=liver-net -v /home/sj/workspace/liver/liver_system:/workspace/liver_back -v /home/sj/workspace/liver/data/:/workspace/liver_back/data -e "TZ=Asia/Shanghai" --workdir=/workspace/liver_back/domo --name=liver_back -d liver_back:v1
+
+    liver_back:
+        #image: back-liver
+        image: registry.cn-hangzhou.aliyuncs.com/orcadt2/back-liver:1.1
+        # image: liver_back:v1
+        container_name: liver_back
+        stdin_open: true
+        #runtime: nvidia
+        tty: true
+        # gpus: all
+        restart: always
+        ports:
+            - 5002:5000
+        networks:
+            - liver-net
+        volumes:
+            - /home/sj/workspace/liver/liver_system:/workspace/liver_back
+            - /opt/data:/workspace/liver_back/data
+        environment:
+            TZ: Asia/Shanghai
+        working_dir: /workspace/liver_back/domo
+        #command: /root/anaconda3/bin/gunicorn -c gun.py manage:app -t 240 -D
+    liver-nginx:
+        image: nginx:perl
+        container_name: liver-nginx
+        restart: always
+        ports:
+            - 8080:80
+        networks:
+            - liver-net
+        volumes:
+            - /home/sj/workspace/liver/conf.d/default.conf:/etc/nginx/conf.d
+            - /home/sj/workspace/liver/dist:/usr/share/nginx/html
+networks:
+  liver-net:
+   external:
+     name: liver-net 

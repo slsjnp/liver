@@ -1,0 +1,367 @@
+[2021-05-07 10:26:25,162][app.py:1892][ERROR][139948079626048] - Exception on /uploads/123 [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: 139948079626048
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1344, in upload_file
+    case = Case.query.filter_by(case_id=case_id).first()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 3300, in __call__
+    return self.class_(**local_kw)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 877, in engine
+    return self.get_engine()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/__init__.py", line 500, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/strategies.py", line 87, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 778, in dbapi
+    import psycopg2
+ModuleNotFoundError: No module named 'psycopg2'
+[2021-05-07 10:27:56,451][app.py:1892][ERROR][139931592021824] - Exception on /uploads/123 [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "liver-pg11" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1344, in upload_file
+    case = Case.query.filter_by(case_id=case_id).first()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3203, in __getitem__
+    return list(res)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "liver-pg11" to address: Temporary failure in name resolution
+
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2021-05-07 10:42:51,354][app.py:1892][ERROR][139977402660672] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/httpsession.py", line 323, in send
+    chunked=self._chunked(request.headers),
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/retry.py", line 386, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 93, in _send_request
+    method, url, body, headers, *args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 120, in _send_output
+    self.send(msg)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 204, in send
+    return super(AWSConnection, self).send(str)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x7f4e8446ab90>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1301, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 51, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 663, in _make_api_call
+    operation_model, request_dict, request_context)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 682, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 102, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 137, in _send_request
+    success_response, exception):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 256, in _needs_retry
+    caught_exception=caught_exception, request_dict=request_dict)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 356, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 228, in emit
+    return self._emit(event_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 211, in _emit
+    response = handler(**kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 183, in __call__
+    if self._checker(attempts, response, caught_exception):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 251, in __call__
+    caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 277, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 317, in __call__
+    caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 223, in __call__
+    attempt_number, caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 359, in _check_caught_exception
+    raise caught_exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 200, in _do_get_response
+    http_response = self._send(request)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 269, in _send
+    return self.http_session.send(request)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/httpsession.py", line 343, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://minio:9000/bucket/123"
+[2021-05-07 10:47:09,219][app.py:1892][ERROR][140220067567424] - Exception on /getFile [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/httpsession.py", line 323, in send
+    chunked=self._chunked(request.headers),
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/retry.py", line 386, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 93, in _send_request
+    method, url, body, headers, *args, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 120, in _send_output
+    self.send(msg)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/awsrequest.py", line 204, in send
+    return super(AWSConnection, self).send(str)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x7f87179dab50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1301, in getFile
+    resp = conn.download('bucket', path)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 51, in download
+    Key=key
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 663, in _make_api_call
+    operation_model, request_dict, request_context)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/client.py", line 682, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 102, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 137, in _send_request
+    success_response, exception):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 256, in _needs_retry
+    caught_exception=caught_exception, request_dict=request_dict)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 356, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 228, in emit
+    return self._emit(event_name, kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/hooks.py", line 211, in _emit
+    response = handler(**kwargs)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 183, in __call__
+    if self._checker(attempts, response, caught_exception):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 251, in __call__
+    caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 277, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 317, in __call__
+    caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 223, in __call__
+    attempt_number, caught_exception)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/retryhandler.py", line 359, in _check_caught_exception
+    raise caught_exception
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 200, in _do_get_response
+    http_response = self._send(request)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/endpoint.py", line 269, in _send
+    return self.http_session.send(request)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/botocore/httpsession.py", line 343, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://minio:9000/bucket/123"

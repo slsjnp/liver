@@ -1,0 +1,264 @@
+[2021-05-27 15:45:55,016][app.py:1892][ERROR][140388102731584] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1773, in execute
+    spleen_bmp)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "<__array_function__ internals>", line 6, in stack
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/shape_base.py", line 423, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+[2021-05-27 15:46:55,392][app.py:1892][ERROR][140388102731584] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1773, in execute
+    spleen_bmp)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "<__array_function__ internals>", line 6, in stack
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/shape_base.py", line 423, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+[2021-05-27 15:58:56,391][app.py:1892][ERROR][139623937849152] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1774, in execute
+    spleen_bmp)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 46, in liver_tumor_spleen
+    return v_liver - v_liver_tumor, v_liver / v_spleen, v_spleen, v_liver_tumor
+ZeroDivisionError: float division by zero
+[2021-05-27 16:07:33,855][app.py:1892][ERROR][139732030150464] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1774, in execute
+    spleen_bmp)
+  File "/home/sj/workspace/my_git/liver/liver_system/volume/get_volume.py", line 46, in liver_tumor_spleen
+    return v_liver - v_liver_tumor, v_liver / v_spleen + 0.0001, v_spleen, v_liver_tumor
+ZeroDivisionError: float division by zero
+[2021-05-27 16:09:27,995][app.py:1892][ERROR][140703711991616] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1792, in execute
+    conn.upload('bucket', bmp_upload_path, os.path.join(bmp_path, file_name))
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 44, in upload
+    Body=open(path, 'rb').read()
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_system/domo/app/static/c7ef546cbec211ebbcbd117b5f4217bc/liver/bmp/0.bmp'
+[2021-05-27 16:14:02,134][app.py:1892][ERROR][140523711092544] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1792, in execute
+    conn.upload('bucket', bmp_upload_path, os.path.join(bmp_path, file_name))
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 44, in upload
+    Body=open(path, 'rb').read()
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_system/domo/app/static/74720cd4bec311eb9e6b03002e6dfc62/liver/bmp/0.bmp'
+[2021-05-27 16:30:47,996][app.py:1892][ERROR][140211194447680] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1792, in execute
+    conn.upload('bucket', bmp_upload_path, os.path.join(bmp_path, file_name))
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 44, in upload
+    Body=open(path, 'rb').read()
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_system/domo/app/static/c21944fabec511eb8749c9817ab6819a/liver/bmp/0.bmp'
+[2021-05-27 16:40:00,576][app.py:1892][ERROR][140535810025280] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1792, in execute
+    conn.upload('bucket', bmp_upload_path, os.path.join(bmp_path, file_name))
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/s3.py", line 44, in upload
+    Body=open(path, 'rb').read()
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sj/workspace/my_git/liver/liver_system/domo/app/static/0a7a998cbec711eb8f9c614d44a7a7c1/liver/bmp/0.bmp'
+[2021-05-28 11:55:23,919][app.py:1892][ERROR][139889339582272] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1358, in two
+    for i in range(length, step=length/6):
+TypeError: range() takes no keyword arguments
+[2021-05-28 11:56:04,476][app.py:1892][ERROR][139791699040064] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1358, in two
+    for i in range(length, step=length/6):
+TypeError: range() takes no keyword arguments
+[2021-05-28 11:58:06,438][app.py:1892][ERROR][140120251115328] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1359, in two
+    for i in range(length, step=int(length/6)):
+TypeError: range() takes no keyword arguments
+[2021-05-28 11:59:00,062][app.py:1892][ERROR][140474388629312] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1359, in two
+    for i in range(length, step=int(length/6)):
+TypeError: range() takes no keyword arguments
+[2021-05-28 11:59:43,418][app.py:1892][ERROR][140095556740928] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1359, in two
+    for i in range(length, step=a):
+TypeError: range() takes no keyword arguments
+[2021-05-28 14:50:58,241][app.py:1892][ERROR][140257734039360] - Exception on /two/859f9266bec711ebaea639152fd503bd [GET]
+Traceback (most recent call last):
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sj/anaconda3/envs/py37/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sj/workspace/my_git/liver/liver_system/domo/app/main/views.py", line 1358, in two
+    for i in range(length, a):
+NameError: name 'a' is not defined

@@ -1,0 +1,74 @@
+[2020-12-04 03:20:07,447][app.py:1761][ERROR][140494589323072] - Exception on /two/26d707260c5411eb97990242ac120004 [GET]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1265, in two
+    for bmp in bmp_list:
+NameError: name 'bmp_list' is not defined
+[2020-12-04 03:20:46,288][app.py:1761][ERROR][139703672149824] - Exception on /two/26d707260c5411eb97990242ac120004 [GET]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1255, in two
+    bmp_list = conn.get_list_object('bucket', prefix)
+  File "/workspace/liver_back/domo/app/s3.py", line 28, in get_list_object
+    s = list['Contents']
+KeyError: 'Contents'
+[2020-12-04 03:22:09,468][app.py:1761][ERROR][140065554061120] - Exception on /two/26d707260c5411eb97990242ac120004 [GET]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1255, in two
+    bmp_list = conn.get_list_object('bucket', prefix)
+  File "/workspace/liver_back/domo/app/s3.py", line 28, in get_list_object
+    s = list['Contents']
+KeyError: 'Contents'
+[2020-12-04 03:23:38,800][app.py:1761][ERROR][139726224422720] - Exception on /two/26d707260c5411eb97990242ac120004 [GET]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1256, in two
+    bmp_list = conn.get_list_object('bucket', prefix)
+  File "/workspace/liver_back/domo/app/s3.py", line 28, in get_list_object
+    s = list['Contents']
+KeyError: 'Contents'

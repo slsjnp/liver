@@ -1,0 +1,92 @@
+[2020-10-12 06:36:13,844][app.py:1761][ERROR][140243316586304] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1483, in execute
+    spleen_bmp)
+  File "/workspace/liver_back/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/workspace/liver_back/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "/root/anaconda3/lib/python3.6/site-packages/numpy/core/shape_base.py", line 412, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+[2020-10-12 06:43:04,559][app.py:1761][ERROR][140067343615808] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1483, in execute
+    spleen_bmp)
+  File "/workspace/liver_back/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/workspace/liver_back/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "/root/anaconda3/lib/python3.6/site-packages/numpy/core/shape_base.py", line 412, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+[2020-10-12 06:45:10,459][app.py:1761][ERROR][139918826362688] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1484, in execute
+    spleen_bmp)
+  File "/workspace/liver_back/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/workspace/liver_back/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "/root/anaconda3/lib/python3.6/site-packages/numpy/core/shape_base.py", line 412, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
+[2020-10-12 06:48:08,435][app.py:1761][ERROR][140012406273856] - Exception on /execute [POST]
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/workspace/liver_back/domo/app/main/views.py", line 1485, in execute
+    spleen_bmp)
+  File "/workspace/liver_back/volume/get_volume.py", line 38, in liver_tumor_spleen
+    liver_array = get_array(liver_path)
+  File "/workspace/liver_back/volume/get_volume.py", line 14, in get_array
+    array = np.stack(array, 2)
+  File "/root/anaconda3/lib/python3.6/site-packages/numpy/core/shape_base.py", line 412, in stack
+    raise ValueError('need at least one array to stack')
+ValueError: need at least one array to stack
