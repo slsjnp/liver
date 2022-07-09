@@ -1637,7 +1637,7 @@ def change_image(uid):
             name: file
             type: file
             required: true
-            description: The patient dcm
+            description: The image which changes the label, Red is remove, Blue is add.
           - name: body
             in: body
             required: true
